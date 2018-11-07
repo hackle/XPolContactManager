@@ -3,25 +3,17 @@ package com.spreys.contactmanager
 import android.os.Parcel
 import android.os.Parcelable
 
-data class Contact(var firstName: String?,
-              var lastName: String?,
-              var mobile: String?,
-              var landline: String?) : Parcelable {
-
-    val name: String = "$firstName $lastName"
-    val email: String = "$firstName@spreys.com"
-
+data class Contact(
+                   val id: Int,
+                   val name: String): Parcelable {
     constructor(parcel: Parcel) : this(
-            parcel.readString(),
-            parcel.readString(),
-            parcel.readString(),
-            parcel.readString())
+            parcel.readInt(),
+            parcel.readString()) {
+    }
 
     override fun writeToParcel(parcel: Parcel, flags: Int) {
-        parcel.writeString(firstName)
-        parcel.writeString(lastName)
-        parcel.writeString(mobile)
-        parcel.writeString(landline)
+        parcel.writeInt(id)
+        parcel.writeString(name)
     }
 
     override fun describeContents(): Int {

@@ -38,25 +38,25 @@ class ContactDetailsFragment : Fragment() {
 
         with(contact) {
             activity_details_name.text = this.name
-            activity_details_mobile.text = this.mobile
-            activity_details_landline.text = this.landline
-            activity_details_email.text = this.email
+//            activity_details_mobile.text = this.mobile
+//            activity_details_landline.text = this.landline
+//            activity_details_email.text = this.email
         }
 
         activity_details_mobile.setOnClickListener {
-            dialNumber(contact.mobile)
+//            dialNumber(contact.mobile)
         }
 
         activity_details_landline.setOnClickListener {
-            dialNumber(contact.landline)
+//            dialNumber(contact.landline)
         }
 
         activity_details_email.setOnClickListener {
-            val emailIntent = Intent(Intent.ACTION_SENDTO, Uri.fromParts(
-                    "mailto", contact.email, null))
-            emailIntent.putExtra(Intent.EXTRA_SUBJECT, "Hello there!")
-            emailIntent.putExtra(Intent.EXTRA_TEXT, "Hi ${contact.firstName},")
-            startActivity(Intent.createChooser(emailIntent, "Send email..."))
+//            val emailIntent = Intent(Intent.ACTION_SENDTO, Uri.fromParts(
+//                    "mailto", contact.email, null))
+//            emailIntent.putExtra(Intent.EXTRA_SUBJECT, "Hello there!")
+//            emailIntent.putExtra(Intent.EXTRA_TEXT, "Hi ${contact.firstName},")
+//            startActivity(Intent.createChooser(emailIntent, "Send email..."))
         }
     }
 

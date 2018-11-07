@@ -25,7 +25,7 @@ class ContactsAdapter(private val context: Context, private val contacts: List<C
         val contact = contacts[position]
 
         holder.itemView.name_text_view.text = contact.name
-        holder.itemView.mobile_text_view.text = contact.mobile
+//        holder.itemView.mobile_text_view.text = contact.mobile
 
         holder.itemView.setOnClickListener {
             val intent = Intent(context, ContactDetailsActivity::class.java)

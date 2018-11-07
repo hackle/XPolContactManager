@@ -16,7 +16,7 @@ class ContactDetailsActivity: AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_contact_details)
 
-        val contact = intent.extras?.getParcelable(EXTRA_CONTACT) as Contact
+        val contact = intent.extras?.get(EXTRA_CONTACT) as Contact
 
         val fragment = ContactDetailsFragment.newInstance(contact)
 
